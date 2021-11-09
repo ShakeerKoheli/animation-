@@ -1,0 +1,40 @@
+#animation{
+    width:10rem;
+    height: 10rem;
+    margin:2rem;
+    border:0.05rem solid green;
+    animation-name:first-animation;
+    /* duration of one-cycle  */
+    animation-duration:2s;
+    /* "value of infinite" */
+    animation-iteration-count:3;
+    /* alternate-0-50-100-50-0-50-100---------- */
+    /* reverse-reverse the style 100-50-0-100-50-0---- */
+    animation-direction:alternate;
+    /* ease-in:-start slowly and ends fast, esae-out:-start fast and ends slowly */
+    animation-timing-function:ease-in;
+    /* we want to stay in the last state */
+    animation-fill-mode:forwards;
+
+}
+#animation:hover{
+    /* pause and play when curser over the box */
+    animation-play-state:paused;
+}
+
+/* key_frame rules in below  */
+@keyframes first-animation{
+    0%{
+        background-color: aqua;
+        border-radius:2rem;
+    }
+    50%{
+        background-color:purple;
+        border-radius:3.5rem;
+    }
+    100%{
+        
+        background-color:yellow;
+        border-radius:5rem;
+    }
+}
